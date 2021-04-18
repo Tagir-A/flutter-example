@@ -11,7 +11,7 @@ RUN cd /home/gitpod && \
   tar -xvf flutter_sdk.tar.xz && rm flutter_sdk.tar.xz
 
 # Install chrome
-RUN wget -qO https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+RUN wget -qO google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     sudo apt install ./google-chrome-stable_current_amd64.deb 
 
 # Web is available on master channel
