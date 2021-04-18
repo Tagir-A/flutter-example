@@ -11,9 +11,8 @@ RUN cd /home/gitpod && \
   tar -xvf flutter_sdk.tar.xz && rm flutter_sdk.tar.xz
 
 # Install chrome
-RUN sudo apt-get -q update && \
-    sudo apt-get install -yq chromium-browser && \
-    sudo rm -rf /var/lib/apt/lists/*
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+    sudo apt install ./google-chrome-stable_current_amd64.deb 
 
 # Web is available on master channel
 # RUN $FLUTTER_HOME/bin/flutter channel master && $FLUTTER_HOME/bin/flutter upgrade && $FLUTTER_HOME/bin/flutter config --enable-web
